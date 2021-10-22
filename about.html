@@ -6,11 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/texts.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <title>What is DNA Fingerprinting?</title>
 </head>
 
 <body>
-    <h1>Lorem dolor sit amet</h1>
+    <section class="cover">
+        <div class="container h-30vh d-flex align-items-center">
+            <h1><span class="text-light-green">DNA Fingerprinting</span>: Identifying a person from their DNA</h1>
+        </div>
+    </section>
+
+    <section class="mt-5">
+        <div class="container">
+            <h3 class="text-light-green bold">tl;dr</h3>
+            <p class="lead">In order for DNA fingerprinting to work, the DNA needs to contain a sequence that is unique
+                in its DNA. Used to identify bodies, track down blood relatives, paternity disputes, and more. </p>
+
+            <h3 class="text-wheat bold">How does DNA Fingerprint identify a person?</h3>
+            <p>DNA fingerprinting focuses on sequences of DNA called minisatellites that contain repeating patterns with
+                no known function. </p>
+
+            <blockquote>Minisatellites (AKA tandem repeats) - repetitive DNA sequences (10-60bp) that are repeated
+                around 5-60 times in the entire genome.
+            </blockquote>
+
+
+            <p>Minisatellites have a rich G-C base pair content and a high mutation rate.</p>
+
+            <iframe src="https://www.youtube.com/embed/g-em1OPKazs" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+
+            <p>Therefore, a person is likely to have a similar number of repeats to their close relatives than people
+                more distantly related to them and strangers. </p>
+
+            <p>Minisatellites are present in the centromeres and the telomeres of chromosomes. They also regulate
+                transcription and splicing of genes
+            </p>
+
+            <p>STRs (includes minisatellites) appear in the non-coding regions of the DNA (don’t encode proteins), so
+                mutations appear here much more often than in other parts of the genome.</p>
+
+            <blockquote>Minisatellites (AKA tandem repeats) - repetitive DNA sequences (10-60bp) that are repeated
+                around 5-60 times in the entire genome.
+            </blockquote>
+
+            <p>VNTR’s are inherited from one generation to the next</p>
+
+            <h3 class="text-wheat bold">Example of Lab Identification</h3>
+            <p>A given person's VNTRs come from the genetic information donated by his or her parents; he or she could
+                have VNTRs inherited from his or her mother or father, or a combination, but never a VNTR either of his
+                or her parents do not have. Shown below are the VNTR patterns for Mrs. Nguyen [blue], Mr. Nguyen
+                [yellow], and their four children: D1 (the Nguyens' biological daughter), D2 (Mr. Nguyen's
+                step-daughter, child of Mrs. Nguyen and her former husband [red]), S1 (the Nguyens' biological son), and
+                S2 (the Nguyens' adopted son, not biologically related [his parents are light and dark green]).</p>
+            <div class="text-center">
+                <img src="./img/vntr.gif" alt="" class="img-fluid">
+            </div>
+            <p>Because VNTR patterns are inherited genetically, a given person's VNTR pattern is more or less unique.
+                The more VNTR probes used to analyze a person's VNTR pattern, the more distinctive and individualized
+                that pattern, or DNA fingerprint, will be.</p>
+
+            <h3 class="text-wheat bold">Use in Crime Scenes</h3>
+            <p>Almost every single cell in a multicellular organism contains the full set of DNA required for that
+                organism (its complete genome)
+                This is why when blood is left behind at a crime scene, we are able to use the blood to get the entire
+                DNA.
+            </p>
+
+            <h3 class="text-light-green bold">Process of DNA Fingerprinting in Real Life</h3>
+
+            <ol>
+                <li>A DNA sample is taken (mouth swab, blood sample, a swab from the crime scene, etc) is taken and
+                    purified
+                </li>
+                <li>In order to separate out the tandem repeats, the sample is put through PCR
+                </li>
+                <li>PCR copies and amplifies specific target DNA sequences, which in this case are STRs, increasing
+                    their relative numbers in the sample</li>
+                <li>The different lengths copied during the PCR reaction are then separated out using electrophoresis.
+                </li>
+                <li>DNA is added to an agarose gel and an electric current is run through it.</li>
+                <li>Since DNA is negatively charged, the DNA will move through the gel towards the other end of the gel.
+                </li>
+                <li>Longer sequences will not move far as much as shorter sequences.</li>
+                <li>Human inspection is able to match the result on the gel to the known gel results in a database,
+                    effectively identifying the pereson.</li>
+            </ol>
+
+            <iframe src="https://www.youtube.com/embed/QxCoG5vuinc" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section class="navbar">
+        <div class="container d-flex justify-content-end">
+            <p class="lead">
+                <a href="/research.html">Next Page</a>
+            </p>
+        </div>
+    </section>
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/js/tether.min.js"></script>
