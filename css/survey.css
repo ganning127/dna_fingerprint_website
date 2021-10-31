@@ -15,7 +15,7 @@
 
 .chart-bottom {
   margin-top: 1rem;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.913);
   color: black;
   border-radius: 10px;
   padding: 1rem;

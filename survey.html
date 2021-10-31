@@ -15,7 +15,7 @@
 <body>
 
     <!-- Start video hero -->
-    <div class="video-hero jquery-background-video-wrapper demo-video-wrapper">
+    <div class="video-hero jquery-background-video-wrapper demo-video-wrapper" id="video">
         <video class="jquery-background-video" autoplay muted loop poster="./img/survey_bkg.jpg">
             <source src="./img/survey_bkg.mp4" type="video/mp4">
             <source src="./img/survey_bkg.webm" type="video/webm">
@@ -24,7 +24,7 @@
         <div class="page-width">
             <div class="video-hero--content">
                 <h1>DNA Fingerprinting <span class="text-light-green">Survey</span></h1>
-                <p>Want to have your opinnion on DNA Fingerprinting heard? Fill out this survey!</p>
+                <p>All responses are anonymus. Data is used for research on public opinnion on DNA Fingerprinting.</p>
             </div>
         </div>
     </div>
@@ -32,16 +32,16 @@
 
     <section class="mt-4">
         <div class="container">
-            <form class="" onsubmit="formSubmit(event)">
+            <form onsubmit="formSubmit(event)" id="survey">
                 <div class="form-row align-items-center">
                     <div class="form-group col-md-8">
                         <label class="my-1 mr-2" for="support_general">How much do you support DNA
                             fingerprinting?</label>
                     </div>
                     <div class="form-group col-md-4">
-                        <select class="custom-select my-1 mr-sm-2" id="support_general">
-                            <option value="">Choose...</option>
-                            <option value="strong" selected>Strongly support</option>
+                        <select class="custom-select my-1 mr-sm-2" id="support_general" required>
+                            <option value="" selected>Choose...</option>
+                            <option value="strong">Strongly support</option>
                             <option value="med">Support</option>
                             <option value="neu">Neutral</option>
                             <option value="med_opp">Oppose</option>
@@ -57,11 +57,11 @@
                             being used in being used to solve crimes?</label>
                     </div>
                     <div class="form-group col-md-4">
-                        <select class="custom-select my-1 mr-sm-2" id="support_solve_crime">
-                            <option value="">Choose...</option>
+                        <select class="custom-select my-1 mr-sm-2" id="support_solve_crime" required>
+                            <option value="" selected>Choose...</option>
                             <option value="strong">Strongly support</option>
                             <option value="med">Support</option>
-                            <option value="neu" selected>Neutral</option>
+                            <option value="neu">Neutral</option>
                             <option value="med_opp">Oppose</option>
                             <option value="strong_opp">Strongly oppose</option>
                         </select>
@@ -75,9 +75,9 @@
                             fingerprinting?</label>
                     </div>
                     <div class="form-group col-md-4">
-                        <select class="custom-select my-1 mr-sm-2" id="bias">
-                            <option value="">Choose...</option>
-                            <option value="strong" selected>Strongly agree</option>
+                        <select class="custom-select my-1 mr-sm-2" id="bias" required>
+                            <option value="" selected>Choose...</option>
+                            <option value="strong">Strongly agree</option>
                             <option value="med">Agree</option>
                             <option value="neu">Neutral</option>
                             <option value="med_opp">Disagree</option>
@@ -89,13 +89,13 @@
 
                 <div class="form-row align-items-center">
                     <div class="form-group col-md-8">
-                        <label class="my-1 mr-2" for="infringe_rights">DDo you think DNA fingerprinting infringes upon
+                        <label class="my-1 mr-2" for="infringe_rights">Do you think DNA fingerprinting infringes upon
                             our rights? </label>
                     </div>
                     <div class="form-group col-md-4">
-                        <select class="custom-select my-1 mr-sm-2" id="infringe_rights">
-                            <option value="">Choose...</option>
-                            <option value="strong" selected>Strongly agree</option>
+                        <select class="custom-select my-1 mr-sm-2" id="infringe_rights" required>
+                            <option value="" selected>Choose...</option>
+                            <option value="strong">Strongly agree</option>
                             <option value="med">Agree</option>
                             <option value="neu">Neutral</option>
                             <option value="med_opp">Disagree</option>
@@ -111,10 +111,10 @@
                             data?</label>
                     </div>
                     <div class="form-group col-md-4">
-                        <select class="custom-select my-1 mr-sm-2" id="national_db">
-                            <option value="">Choose...</option>
+                        <select class="custom-select my-1 mr-sm-2" id="national_db" required>
+                            <option value="" selected>Choose...</option>
                             <option value="strong">Strongly support</option>
-                            <option value="med" selected>Support</option>
+                            <option value="med">Support</option>
                             <option value="neu">Neutral</option>
                             <option value="med_opp">Oppose</option>
                             <option value="strong_opp">Strongly oppose</option>
@@ -129,13 +129,13 @@
                             discriminatory?</label>
                     </div>
                     <div class="form-group col-md-4">
-                        <select class="custom-select my-1 mr-sm-2" id="racial_discrim">
-                            <option value="">Choose...</option>
+                        <select class="custom-select my-1 mr-sm-2" id="racial_discrim" required>
+                            <option value="" selected>Choose...</option>
                             <option value="strong">Strongly agree</option>
                             <option value="med">Agree</option>
                             <option value="neu">Neutral</option>
                             <option value="med_opp">Disagree</option>
-                            <option value="strong_opp" selected>Strongly disagree</option>
+                            <option value="strong_opp">Strongly disagree</option>
                         </select>
                     </div>
                 </div>
@@ -147,10 +147,10 @@
                             fingerprinting?</label>
                     </div>
                     <div class="form-group col-md-4">
-                        <select class="custom-select my-1 mr-sm-2" id="biggest_issue">
-                            <option value="">Choose...</option>
+                        <select class="custom-select my-1 mr-sm-2" id="biggest_issue" required>
+                            <option value="" selected>Choose...</option>
                             <option value="hum_bias">Human bias</option>
-                            <option value="racial_discrim" selected>Racial discrimination </option>
+                            <option value="racial_discrim">Racial discrimination </option>
                             <option value="priv_con">Privacy concerns</option>
                         </select>
                     </div>
@@ -162,9 +162,9 @@
                             fingerprinting?</label>
                     </div>
                     <div class="form-group col-md-4">
-                        <select class="custom-select my-1 mr-sm-2" id="biggest_benefit">
-                            <option value="">Choose...</option>
-                            <option value="solv_crime" selected>Ability to solve crime
+                        <select class="custom-select my-1 mr-sm-2" id="biggest_benefit" required>
+                            <option value="" selected>Choose...</option>
+                            <option value="solv_crime">Ability to solve crime
                             </option>
                             <option value="track_rela">Track down blood relatives
                             </option>
@@ -179,52 +179,24 @@
                     <textarea class="form-control" id="other_comments" rows="3"></textarea>
                 </div>
 
+                <div class="text-center">
 
-                <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                    <button type="submit" class="btn btn-primary mb-2" id="submit">
+                        Submit
+                    </button>
+
+
+                </div>
             </form>
+
+            <h1 id="thanks" class="hidden">Thank you for your response!</h1>
         </div>
     </section>
-    <!-- include data visualizations and charts -->
 
     <section class="mt-4">
         <div class="container">
-            <h1 class="text-center">Data <span class="text-light-green">Visualizations</span></h1>
-
-            <!-- row 1 -->
-            <div class="row">
-                <div class="col-md-6">
-                    <h5 class="chart-top">How much do you support DNA fingerprinting? </h5>
-                    <canvas id="support_general_chart" class="chart-bottom">
-                    </canvas>
-                </div>
-
-
-                <div class="col-md-6">
-                    <h5 class="chart-top">How much do you support DNA fingerprinting being used in being used to solve
-                        crimes? </h5>
-                    <canvas id="support_solve_crime_chart" class="chart-bottom">
-                    </canvas>
-                </div>
-            </div>
-
-            <!-- row2 -->
-            <div class="row mt-4">
-                <div class="col-md-6">
-                    <h5 class="chart-top">Do you think that there is bias in DNA fingerprinting? </h5>
-                    <canvas id="bias_chart" class="chart-bottom">
-                    </canvas>
-                </div>
-
-
-                <div class="col-md-6">
-                    <h5 class="chart-top">Do you think DNA fingerprinting infringes upon our rights? </h5>
-                    <canvas id="infringe_rights_chart" class="chart-bottom">
-                    </canvas>
-                </div>
-            </div>
+            <p class="text-muted text-center"><em>All survey responses are anonymous</em></p>
         </div>
-
-
     </section>
 
 

@@ -26,3 +26,11 @@ body {
 a {
   text-decoration: none;
 }
+
+.hidden {
+    display: none;
+}
+
+.w-100px {
+    width: 100px;
+}
