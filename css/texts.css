@@ -27,3 +27,12 @@ blockquote {
   blockquote p {
     display: inline;
   }
+
+a {
+  color: #ad92e3;
+}
+
+a:hover {
+  color: #ad92e3;
+}
+
