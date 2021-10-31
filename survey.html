@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/texts.css">
+    <link rel="stylesheet" href="./css/survey.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Start video hero -->
+    <div class="video-hero jquery-background-video-wrapper demo-video-wrapper">
+        <video class="jquery-background-video" autoplay muted loop poster="./img/survey_bkg.jpg">
+            <source src="./img/survey_bkg.mp4" type="video/mp4">
+            <source src="./img/survey_bkg.webm" type="video/webm">
+        </video>
+        <div class="video-overlay"></div>
+        <div class="page-width">
+            <div class="video-hero--content">
+                <h1>DNA Fingerprinting <span class="text-light-green">Survey</span></h1>
+                <p>Want to have your opinnion on DNA Fingerprinting heard? Fill out this survey!</p>
+            </div>
+        </div>
+    </div>
+    <!-- End video hero -->
+
+    <section class="mt-4">
+        <div class="container">
+            <form class="" onsubmit="formSubmit(event)">
+                <div class="form-row align-items-center">
+                    <div class="form-group col-md-8">
+                        <label class="my-1 mr-2" for="support_general">How much do you support DNA
+                            fingerprinting?</label>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <select class="custom-select my-1 mr-sm-2" id="support_general">
+                            <option value="">Choose...</option>
+                            <option value="strong" selected>Strongly support</option>
+                            <option value="med">Support</option>
+                            <option value="neu">Neutral</option>
+                            <option value="med_opp">Oppose</option>
+                            <option value="strong_opp">Strongly oppose</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-row align-items-center">
+                    <div class="form-group col-md-8">
+                        <label class="my-1 mr-2" for="support_solve_crime">How much do you support DNA fingerprinting
+                            being used in being used to solve crimes?</label>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <select class="custom-select my-1 mr-sm-2" id="support_solve_crime">
+                            <option value="">Choose...</option>
+                            <option value="strong">Strongly support</option>
+                            <option value="med">Support</option>
+                            <option value="neu" selected>Neutral</option>
+                            <option value="med_opp">Oppose</option>
+                            <option value="strong_opp">Strongly oppose</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-row align-items-center">
+                    <div class="form-group col-md-8">
+                        <label class="my-1 mr-2" for="bias">Do you think that there is bias in DNA
+                            fingerprinting?</label>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <select class="custom-select my-1 mr-sm-2" id="bias">
+                            <option value="">Choose...</option>
+                            <option value="strong" selected>Strongly agree</option>
+                            <option value="med">Agree</option>
+                            <option value="neu">Neutral</option>
+                            <option value="med_opp">Disagree</option>
+                            <option value="strong_opp">Strongly disagree</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-row align-items-center">
+                    <div class="form-group col-md-8">
+                        <label class="my-1 mr-2" for="infringe_rights">DDo you think DNA fingerprinting infringes upon
+                            our rights? </label>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <select class="custom-select my-1 mr-sm-2" id="infringe_rights">
+                            <option value="">Choose...</option>
+                            <option value="strong" selected>Strongly agree</option>
+                            <option value="med">Agree</option>
+                            <option value="neu">Neutral</option>
+                            <option value="med_opp">Disagree</option>
+                            <option value="strong_opp">Strongly disagree</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-row align-items-center">
+                    <div class="form-group col-md-8">
+                        <label class="my-1 mr-2" for="national_db">How much do you support a national database of DNA
+                            data?</label>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <select class="custom-select my-1 mr-sm-2" id="national_db">
+                            <option value="">Choose...</option>
+                            <option value="strong">Strongly support</option>
+                            <option value="med" selected>Support</option>
+                            <option value="neu">Neutral</option>
+                            <option value="med_opp">Oppose</option>
+                            <option value="strong_opp">Strongly oppose</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-row align-items-center">
+                    <div class="form-group col-md-8">
+                        <label class="my-1 mr-2" for="racial_discrim">Do you think that DNA fingerprinting is racially
+                            discriminatory?</label>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <select class="custom-select my-1 mr-sm-2" id="racial_discrim">
+                            <option value="">Choose...</option>
+                            <option value="strong">Strongly agree</option>
+                            <option value="med">Agree</option>
+                            <option value="neu">Neutral</option>
+                            <option value="med_opp">Disagree</option>
+                            <option value="strong_opp" selected>Strongly disagree</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-row align-items-center">
+                    <div class="form-group col-md-8">
+                        <label class="my-1 mr-2" for="biggest_issue">What is the biggest issue that you see with DNA
+                            fingerprinting?</label>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <select class="custom-select my-1 mr-sm-2" id="biggest_issue">
+                            <option value="">Choose...</option>
+                            <option value="hum_bias">Human bias</option>
+                            <option value="racial_discrim" selected>Racial discrimination </option>
+                            <option value="priv_con">Privacy concerns</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row align-items-center">
+                    <div class="form-group col-md-8">
+                        <label class="my-1 mr-2" for="biggest_benefit">What is the biggest benefit that you see with DNA
+                            fingerprinting?</label>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <select class="custom-select my-1 mr-sm-2" id="biggest_benefit">
+                            <option value="">Choose...</option>
+                            <option value="solv_crime" selected>Ability to solve crime
+                            </option>
+                            <option value="track_rela">Track down blood relatives
+                            </option>
+                            <option value="id_remains">Identify archaeological remains</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="other_comments">Any other comments or notes?</label>
+                    <textarea class="form-control" id="other_comments" rows="3"></textarea>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary mb-2">Submit</button>
+            </form>
+        </div>
+    </section>
+    <!-- include data visualizations and charts -->
+
+    <section class="mt-4">
+        <div class="container">
+            <h1 class="text-center">Data <span class="text-light-green">Visualizations</span></h1>
+
+            <!-- row 1 -->
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="chart-top">How much do you support DNA fingerprinting? </h5>
+                    <canvas id="support_general_chart" class="chart-bottom">
+                    </canvas>
+                </div>
+
+
+                <div class="col-md-6">
+                    <h5 class="chart-top">How much do you support DNA fingerprinting being used in being used to solve
+                        crimes? </h5>
+                    <canvas id="support_solve_crime_chart" class="chart-bottom">
+                    </canvas>
+                </div>
+            </div>
+
+            <!-- row2 -->
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h5 class="chart-top">Do you think that there is bias in DNA fingerprinting? </h5>
+                    <canvas id="bias_chart" class="chart-bottom">
+                    </canvas>
+                </div>
+
+
+                <div class="col-md-6">
+                    <h5 class="chart-top">Do you think DNA fingerprinting infringes upon our rights? </h5>
+                    <canvas id="infringe_rights_chart" class="chart-bottom">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/js/tether.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"
+        integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/survey.js"></script>
+</body>
+
+</html>
