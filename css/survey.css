@@ -1,15 +1,24 @@
+.chart-content {
+  padding: 10px;
 
+  color: black;
+  text-align: center;
 
+}
 
-/* Settings - feel free to play with these */
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
-/**
- * This part should be set separately for each video
- * if there are multiple videos in your site.
- * I.e. '.demo-video-wrapper' is the name of this particular video
- */
-.demo-video-wrapper {
-  background-image: url(https://d3k5xyayaartr5.cloudfront.net/_assets/home-video/beach-waves-loop.jpg);
+.chart-top {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.chart-bottom {
+  margin-top: 1rem;
+  background-color: rgba(255, 255, 255, 0.913);
+  color: black;
+  border-radius: 10px;
+  padding: 1rem;
 }
 
 /* Video overlay and content */
@@ -21,7 +30,6 @@
   right: 0;
   pointer-events: none;
   /* Allows right click menu on the video */
-  background: url("https://d3k5xyayaartr5.cloudfront.net/_assets/pattern-overlays/patterns/black-medium-checks.png") left top repeat;
   opacity: 0.3;
 }
 

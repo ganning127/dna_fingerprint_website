@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/texts.css">
+    <link rel="stylesheet" href="./css/survey.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- include data visualizations and charts -->
+
+    <section class="mt-4">
+        <div class="container">
+            <h1 class="text-center">Data <span class="text-light-green">Visualizations</span></h1>
+
+            <!-- row 1 -->
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="chart-top">How much do you support DNA fingerprinting? </h5>
+                    <canvas id="support_general_chart" class="chart-bottom">
+                    </canvas>
+                </div>
+
+
+                <div class="col-md-6">
+                    <h5 class="chart-top">How much do you support DNA fingerprinting being used in being used to solve
+                        crimes? </h5>
+                    <canvas id="support_solve_crime_chart" class="chart-bottom">
+                    </canvas>
+                </div>
+            </div>
+
+            <!-- row2 -->
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h5 class="chart-top">Do you think that there is bias in DNA fingerprinting? </h5>
+                    <canvas id="bias_chart" class="chart-bottom">
+                    </canvas>
+                </div>
+
+
+                <div class="col-md-6">
+                    <h5 class="chart-top">Do you think DNA fingerprinting infringes upon our rights? </h5>
+                    <canvas id="infringe_rights_chart" class="chart-bottom">
+                    </canvas>
+                </div>
+            </div>
+
+            <!-- row3 -->
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h5 class="chart-top">How much do you support a national database of DNA data? </h5>
+                    <canvas id="national_db_chart" class="chart-bottom">
+                    </canvas>
+                </div>
+
+
+                <div class="col-md-6">
+                    <h5 class="chart-top">Do you think that DNA fingerprinting is racially discriminatory? </h5>
+                    <canvas id="racial_discrim_chart" class="chart-bottom">
+                    </canvas>
+                </div>
+            </div>
+
+
+            <!-- row4 -->
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h5 class="chart-top">What is the biggest issue that you see with DNA fingerprinting? </h5>
+                    <canvas id="biggest_issue_chart" class="chart-bottom">
+                    </canvas>
+                </div>
+
+
+                <div class="col-md-6">
+                    <h5 class="chart-top">What do you think is the biggest benefit of DNA fingerprinting? </h5>
+                    <canvas id="biggest_benefit_chart" class="chart-bottom">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/js/tether.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"
+        integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/data.js"></script>
+</body>
+
+</html>
