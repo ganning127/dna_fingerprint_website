@@ -8,11 +8,144 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/texts.css">
-    <link rel="stylesheet" href="./css/research.css.css">
+    <link rel="stylesheet" href="./css/research.css">
     <title>Research Results</title>
 </head>
 
 <body>
+
+    <section class="cover">
+        <div class="container h-30vh d-flex align-items-center">
+            <h1><span class="text-light-green bold">Research</span>: Public's Opinnion on DNA
+                Fingerprinting using the Twitter API</h1>
+        </div>
+    </section>
+
+    <section class="mt-5">
+        <div class="container">
+
+            <h3 class="text-light-green bold">tl;dr</h3>
+            <p class="lead">Goals: To analyze the public's opinnion on DNA fingerprinting using publically avaliable
+                tweets.</p>
+
+            <h3 class="text-light-green">Overview</h3>
+            <p>As DNA and ancestry companies continue to compile millions of genetic information samples
+                into a database, controversy surrounding whether or not this is ethical. In fact, Ancestry and 23andMe
+                have collectively obtained more than 23 million DNA samples in their databases. (<a
+                    href="https://www.cnbc.com/2019/02/12/privacy-concerns-rise-as-26-million-share-dna-with-ancestry-firms.html"
+                    target="_blank">Source</a>). In order
+                to analyze the public’s sentiment on DNA fingerprinting, which is one such application of creating a DNA
+                database, a script written in Python using Google Colab was created to search the Twitter API for a list
+                of keywords </p>
+
+            <h3 class="text-light-green">Querying the Twitter API</h3>
+            <ol>
+                <li>Create a list of keywords to search the Twitter API for.</li>
+                <li>Query the Twitter API for 100 English tweets for each keyword in the keyword list before a certain
+                    date. The date is changed everyday to query for different results.</li>
+                <li>Populate each raw tweet into their corrosponding date sheet</li>
+            </ol>
+            <p class="text-muted text-center"><em>*Tweets were queried for each day between 10-09-2021 to
+                    11-03-2021</em></p>
+            <div class="text-center mb-5">
+                <img src="./img/query_twitter_api.png" alt="" class="img-fluid mx-auto mh-700px">
+                <p class="text-muted">Figure 1: Diagram of steps taken in collecting publically avaliable tweets.</p>
+            </div>
+
+            <h3 class="text-light-green">Data Cleaning</h3>
+            <ol>
+                <li>Go through each sheet with raw tweets collected in Querying the Twitter API.</li>
+                <li>For each tweet...</li>
+                <li>Replace all URLs with <code>_IMG</code></li>
+                <li>Replace all regular URLs with <code>_URL</code></li>
+                <li>All emojis are replaced with their textual descriptions (🙂 →<code>Slightly Smiling Face</code>)
+                </li>
+                <li>All repeated letters are replaced with just 2 letters of the same repeated character
+                    (<code>heeeeeeeello</code> → <code>heello</code>.</li>
+            </ol>
+
+            <p>This preprocessing was done in order to prepare tweets for sentiment analysis.</p>
+
+            <div class="text-center mb-5">
+                <img src="./img/data_cleaning.png" alt="" class="img-fluid mx-auto mh-700px">
+                <p class="text-muted">Figure 2: Diagram of steps taken in cleaning tweets.</p>
+            </div>
+
+            <p><span class="text-light-green">Example tweet before data cleaning:</span> "We 💚love💚 these photos of
+                some very impressive students learning
+                gel electrophoresis and DNA profiling ... in first year! 🤯 Thank you for sharing the photos @GoreyEtss.
+                We're looking forward to seeing what these scientists do next! #BiotechExperience @ABEProgOffice
+                https://t.co/idow3wAkSd"</p>
+
+            <p><span class="text-light-green">Example tweet after data cleaning:</span> ": green heart : love : green
+                heart : photos
+                impressive students learning gel electrophoresis DNA profiling .. first year ! : exploding head : Thank
+                sharing photos @ GoreyEtss . 're looking forward seeing scientists next ! #BiotechExperience @
+                ABEProgOffice _IMAGE"</p>
+
+            <h3 class="text-light-green">Sentiment Analysis</h3>
+            <p>After data collection and cleaning, sentiment analysis was performed on each tweet, allowing us to
+                determine an average sentiment for each keyword we searched for.</p>
+
+            <table class="table table-hover table-dark table-sm text-center" id="data-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Keyword</th>
+                        <th scope="col">Sentiment Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">genetic fingerprinting</th>
+                        <td>-0.07</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">dna profiling</th>
+                        <td>0.02</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">dna identification</th>
+                        <td>0.04</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">dna typing</th>
+                        <td>0.06</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">genetic profiling</th>
+                        <td>0.08</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">dna profile</th>
+                        <td>0.09</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">dna fingerprinting</th>
+                        <td>0.1</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">genetic profile</th>
+                        <td>0.1</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">genetic fingerprint</th>
+                        <td>0.13</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="text-muted text-center">Note: sentiment scores ranged from [-1,1] with -1 being the most negative
+                and 1 being the most positive</p>
+
+            <canvas id="sentiment_chart" class="mt-5"></canvas>
+
+
+        </div>
+
+
+    </section>
 
     <section class="navbar">
         <div class="container text-center">
@@ -26,6 +159,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/js/tether.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"
+        integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/research.js"></script>
 </body>
 
 </html>

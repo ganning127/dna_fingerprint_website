@@ -38,3 +38,7 @@ a {
 .separator {
     height: 5rem;
 }
+
+.mh-700px {
+    max-height: 700px;
+}
