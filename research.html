@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/texts.css">
     <link rel="stylesheet" href="./css/research.css">
@@ -107,8 +110,14 @@
                         <th scope="row">dna identification</th>
                         <td>0.04</td>
                     </tr>
+
                     <tr>
                         <th scope="row">dna typing</th>
+                        <td>0.05</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">dna fingerprint</th>
                         <td>0.06</td>
                     </tr>
                     <tr>
@@ -138,11 +147,135 @@
 
             <p class="text-muted text-center">Note: sentiment scores ranged from [-1,1] with -1 being the most negative
                 and 1 being the most positive</p>
-
             <canvas id="sentiment_chart" class="mt-5"></canvas>
 
+            <p>Through sentiment analysis, it is possible to determine the public's opinnion on DNA fingerprinting.
+                <code>Genetic profiling</code> contained tweets with the most positive sentiment (0.13), while
+                <code>genetic fingerprinting</code> contained tweets with the most negative sentiment. Taking the
+                average sentiment across all keywords reveals that the average sentiment is <code>0.06</code> This
+                reflects that the public has a slightly positive sentiment when it comes to discussing DNA
+                fingerprinting.
+            </p>
+            </p>
 
+            <h3 class="text-light-green">Subjectivity Analysis</h3>
+            <p>Subjectivity analysis (how objective or opinnionated) was performed on each tweet.</p>
+
+            <table class="table table-hover table-dark table-sm text-center" id="data-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Keyword</th>
+                        <th scope="col">Sentiment Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">dna fingerprinting</th>
+                        <td>0.35</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">genetic fingerprinting</th>
+                        <td>0.37</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">dna profiling</th>
+                        <td>0.38</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">dna fingerprint</th>
+                        <td>0.39</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">genetic fingerprint</th>
+                        <td>0.40</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">dna identification</th>
+                        <td>0.40</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">genetic profile</th>
+                        <td>0.40</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">dna profile</th>
+                        <td>0.41</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">dna typing</th>
+                        <td>0.43</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">genetic profiling</th>
+                        <td>0.45</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="text-muted text-center">Note: The subjectivity is a float within the range [0.0, 1.0] where 0.0 is
+                very objective and 1.0 is very subjective.</p>
+            <canvas id="subjectivity_chart" class="mt-5"></canvas>
+            <p>Through subjectivity analysis, it was possible to determine how objective or subjective tweets about a
+                keyword were. For example, <code>dna fingerprinting</code> contained tweets that were the most
+                objective (0.35), while <code>genetic profiling</code> contained tweets that were the most subjective
+                (0.45). Taking the average of all keywords in subjectivity analysis reveals that the average
+                subjectivity was <code>0.398</code>. This means that on averge, the public typically is more objective
+                than subjective when it comes to talking about DNA fingerprinting</p>
+
+            <h3 class="text-light-green">Results</h3>
+            <ul>
+                <li>The public generally has a positive sentiment when talking about DNA fingerprinting.</li>
+                <li>The public generally is more objective than subjective when talking about DNA fingerprinting.</li>
+            </ul>
+
+            <h3 class="text-light-green">Source Code <a
+                    href="https://github.com/ganning127/dna-fingerprinting-sentiment-analysis/tree/main#sentiment-analysis-using-the-twitter-api-for-the-public-opinnion-on-dna-fingerprinting"
+                    target="_blank"><i class="fab fa-github"></i></a></h3>
+            <p>The source code, raw data, cleaned data, and analysis results are all published on <a
+                    href="https://github.com/ganning127/dna-fingerprinting-sentiment-analysis/tree/main#sentiment-analysis-using-the-twitter-api-for-the-public-opinnion-on-dna-fingerprinting"
+                    target="_blank">GitHub</a> in order to
+                promote further research on this topic.</p>
+            <ul>
+                <li>Code can be found in the <code>API_Search_and_Analysis.ipynb</code>file.</li>
+                <li><code>combined_data.zip</code> contains all raw tweets both with and without data cleaning.</li>
+                <li><code>overview_and_keywords.zip</code> are two csv files that give a general overview of the project
+                    and detail which keywords the script used to query the Twitter API with. Changing the keywords on
+                    the <code>keywords</code> sheet allows you to query for different keywords. </li>
+                <li><code>raw_data.zip</code> contains all of the raw tweets pulled back from the Twitter API.</li>
+                <li><code>results.zip</code> contains csv files with sentiment, subjectivity, and phrase analysis
+                    scores.</li>
+            </ul>
+
+            <h3 class="text-light-green">Errors</h3>
+            <ul>
+                <li>
+                    The range in sentiment scores was only <code>0.2</code>, which may be explained
+                    by just the timespan in which tweets were collected, rather than the overall sentiment over time.
+                </li>
+                <li>The range in subjectivity scores was only <code>0.10</code>, which may be small enough to be
+                    accounted for in confidence errors by the subjectivity analysis model.</li>
+                <li>Since we did not have access to the Twitter's research API we were not able to search for tweets in
+                    all of Twitter's history, only within a set month. These results may be different than the results
+                    resulting from querying for tweets from all of Twitter's datbases.</li>
+            </ul>
+
+            <h3 class="text-light-green">Further Research</h3>
+            <p>Further research could be done in the following aspects:</p>
+            <ul>
+                <li>Instead of querying Twitter's API for tweets over the span of a month, query their overall database
+                    for tweetes in all of time.</li>
+                <li>The source code linked above could be adjusted to perform sentiment analysis on ANY project. All you
+                    would need to do is add your API developer keys and change keywords to search for!</li>
+            </ul>
         </div>
+
+        <!-- 
+    Applicatins:
+     -Subjectivity scores could be used to help researchers determine which keywords to search for if they want factual and objective data.
+
+
+ -->
 
 
     </section>
