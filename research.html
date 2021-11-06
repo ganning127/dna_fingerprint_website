@@ -38,10 +38,24 @@
                 database, a script written in Python using Google Colab was created to search the Twitter API for a list
                 of keywords </p>
 
+            <p>List of technologies used:</p>
+            <ul>
+                <li><code>tweepy</code> (to search for tweets)</li>
+                <li><code>gspread</code> (to create database)</li>
+                <li><code>colab-env</code> (to set environment variables)</li>
+                <li><code>demoji (to process and clean emojis)</code></li>
+                <li><code>textblob</code> (sentiment and subjectivity analysis)</li>
+                <li><code>nltk</code> (text preprocessing)</li>
+                <li><code>pandas</code></li>
+                <li><code>re</code> (text and data cleaning)</li>
+                <li><code>os</code> (to get environment variables)</li>
+            </ul>
+
             <h3 class="text-light-green">Querying the Twitter API</h3>
             <ol>
                 <li>Create a list of keywords to search the Twitter API for.</li>
-                <li>Query the Twitter API for 100 English tweets for each keyword in the keyword list before a certain
+                <li>Query the Twitter API for 100 English tweets for each keyword in the keyword list before a
+                    certain
                     date. The date is changed everyday to query for different results.</li>
                 <li>Populate each raw tweet into their corrosponding date sheet</li>
             </ol>
@@ -49,7 +63,8 @@
                     11-03-2021</em></p>
             <div class="text-center mb-5">
                 <img src="./img/query_twitter_api.png" alt="" class="img-fluid mx-auto mh-700px">
-                <p class="text-muted">Figure 1: Diagram of steps taken in collecting publically avaliable tweets.</p>
+                <p class="text-muted">Figure 1: Diagram of steps taken in collecting publically avaliable tweets.
+                </p>
             </div>
 
             <h3 class="text-light-green">Data Cleaning</h3>
@@ -71,15 +86,19 @@
                 <p class="text-muted">Figure 2: Diagram of steps taken in cleaning tweets.</p>
             </div>
 
-            <p><span class="text-light-green">Example tweet before data cleaning:</span> "We 💚love💚 these photos of
+            <p><span class="text-light-green">Example tweet before data cleaning:</span> "We 💚love💚 these photos
+                of
                 some very impressive students learning
-                gel electrophoresis and DNA profiling ... in first year! 🤯 Thank you for sharing the photos @GoreyEtss.
+                gel electrophoresis and DNA profiling ... in first year! 🤯 Thank you for sharing the photos
+                @GoreyEtss.
                 We're looking forward to seeing what these scientists do next! #BiotechExperience @ABEProgOffice
                 https://t.co/idow3wAkSd"</p>
 
-            <p><span class="text-light-green">Example tweet after data cleaning:</span> ": green heart : love : green
+            <p><span class="text-light-green">Example tweet after data cleaning:</span> ": green heart : love :
+                green
                 heart : photos
-                impressive students learning gel electrophoresis DNA profiling .. first year ! : exploding head : Thank
+                impressive students learning gel electrophoresis DNA profiling .. first year ! : exploding head :
+                Thank
                 sharing photos @ GoreyEtss . 're looking forward seeing scientists next ! #BiotechExperience @
                 ABEProgOffice _IMAGE"</p>
 
@@ -136,7 +155,8 @@
                 </tbody>
             </table>
 
-            <p class="text-muted text-center">Note: sentiment scores ranged from [-1,1] with -1 being the most negative
+            <p class="text-muted text-center">Note: sentiment scores ranged from [-1,1] with -1 being the most
+                negative
                 and 1 being the most positive</p>
 
             <canvas id="sentiment_chart" class="mt-5"></canvas>
