@@ -36,3 +36,9 @@ a:hover {
   color: #ad92e3;
 }
 
+code {
+  background-color: rgba(110, 110, 110, 0.6);
+  padding: 3px;
+  border-radius: 5px;
+  color: lightgreen;
+}
