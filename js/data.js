@@ -1,6 +1,12 @@
 const HASURA_ADMIN_SECRET = "le0JJkEQTajIKHYcLGjnSNfiSzBMhLaaImogHM0sjH520PG1N4K0hyXfMDsvANMq";
-
 const HASURA_ENDPOINT = "https://winning-scorpion-44.hasura.app/v1/graphql";
+
+const strong_color = "rgba(2, 186, 63, 1.0)";
+const med_color = "rgba(178, 255, 145, 1.0)";
+const neu_color = "rgba(255, 239, 0, 1.0)";
+const med_opp_color = "rgba(255, 174, 132, 1.0)";
+const strong_opp_color = "rgba(186, 5, 5, 1.0)";
+
 async function createGraphs() {
 
     const responseData = await getData();
@@ -106,8 +112,6 @@ function create_biggest_issue_chart(responseData) {
                 'rgba(255, 99, 132, 0.9)',
                 'rgba(54, 162, 235, 0.9)',
                 'rgba(255, 206, 86, 0.9)',
-                'rgba(75, 192, 192, 0.9)',
-                'rgba(153, 102, 255, 0.9)',
             ],
             color: "#ffffff",
             borderWidth: 1
@@ -172,11 +176,11 @@ function create_racial_discrim_chart(responseData) {
             label: 'How much do you agree with racial discrimination?',
             data: [racial_discrim_data.strong, racial_discrim_data.med, racial_discrim_data.neu, racial_discrim_data.med_opp, racial_discrim_data.strong_opp],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.9)',
-                'rgba(54, 162, 235, 0.9)',
-                'rgba(255, 206, 86, 0.9)',
-                'rgba(75, 192, 192, 0.9)',
-                'rgba(153, 102, 255, 0.9)',
+                strong_color,
+                med_color,
+                neu_color,
+                med_opp_color,
+                strong_opp_color,
             ],
             color: "#ffffff",
             borderWidth: 1
@@ -207,11 +211,11 @@ function create_national_db_chart(responseData) {
             label: 'How much do you support DNA Fingerprinting?',
             data: [national_db_data.strong, national_db_data.med, national_db_data.neu, national_db_data.med_opp, national_db_data.strong_opp],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.9)',
-                'rgba(54, 162, 235, 0.9)',
-                'rgba(255, 206, 86, 0.9)',
-                'rgba(75, 192, 192, 0.9)',
-                'rgba(153, 102, 255, 0.9)',
+                strong_color,
+                med_color,
+                neu_color,
+                med_opp_color,
+                strong_opp_color,
             ],
             color: "#ffffff",
             borderWidth: 1
@@ -241,19 +245,13 @@ function create_infringe_rights_chart(responseData) {
             label: 'Infringe Rights Data',
             data: [infringe_rights_data.strong, infringe_rights_data.med, infringe_rights_data.neu, infringe_rights_data.med_opp, infringe_rights_data.strong_opp],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(255, 205, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
+                strong_color,
+                med_color,
+                neu_color,
+                med_opp_color,
+                strong_opp_color,
             ],
-            borderColor: [
-                'rgb(255, 99, 132)',
-                'rgb(255, 159, 64)',
-                'rgb(255, 205, 86)',
-                'rgb(75, 192, 192)',
-                'rgb(54, 162, 235)',
-            ],
+
             borderWidth: 1
         }]
     };
@@ -263,6 +261,38 @@ function create_infringe_rights_chart(responseData) {
     const infringe_rights_chart_config = {
         type: 'bar',
         data: data,
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Number of people vs. Category',
+
+                },
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                x: {
+                    display: true,
+                    title: {
+                        display: true,
+                        text: "Category",
+                    }
+
+                },
+                y: {
+                    display: true,
+                    title: {
+                        display: true,
+                        text: "Number of people",
+
+                    }
+
+                }
+
+            }
+        }
     };
 
     const myChart = new Chart(infringe_rights_chart, infringe_rights_chart_config);
@@ -286,19 +316,11 @@ function create_bias_chart(responseData) {
             label: 'Bias Data',
             data: [bias_data.strong, bias_data.med, bias_data.neu, bias_data.med_opp, bias_data.strong_opp],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(255, 205, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-            ],
-            borderColor: [
-                'rgb(255, 99, 132)',
-                'rgb(255, 159, 64)',
-                'rgb(255, 205, 86)',
-                'rgb(75, 192, 192)',
-                'rgb(54, 162, 235)',
-            ],
+                strong_color,
+                med_color,
+                neu_color,
+                med_opp_color,
+                strong_opp_color,],
             borderWidth: 1
         }]
     };
@@ -308,6 +330,38 @@ function create_bias_chart(responseData) {
     const bias_chart_config = {
         type: 'bar',
         data: data,
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Number of people vs. Category',
+
+                },
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                x: {
+                    display: true,
+                    title: {
+                        display: true,
+                        text: "Category",
+                    }
+
+                },
+                y: {
+                    display: true,
+                    title: {
+                        display: true,
+                        text: "Number of people",
+
+                    }
+
+                }
+
+            }
+        }
     };
 
 
@@ -365,11 +419,11 @@ function create_support_solve_crime_chart(responseData) {
             label: 'How much do you support DNA fingerprinting being used in being used to solve crimes?',
             data: [support_solve_crime_data.strong, support_solve_crime_data.med, support_solve_crime_data.neu, support_solve_crime_data.med_opp, support_solve_crime_data.strong_opp],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.9)',
-                'rgba(54, 162, 235, 0.9)',
-                'rgba(255, 206, 86, 0.9)',
-                'rgba(75, 192, 192, 0.9)',
-                'rgba(153, 102, 255, 0.9)',
+                strong_color,
+                med_color,
+                neu_color,
+                med_opp_color,
+                strong_opp_color,
             ],
             color: "#ffffff",
             borderWidth: 1
@@ -482,11 +536,11 @@ function create_support_general_chart(responseData) {
             label: 'How much do you support DNA Fingerprinting?',
             data: [support_general_data.strong, support_general_data.med, support_general_data.neu, support_general_data.med_opp, support_general_data.strong_opp],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.9)',
-                'rgba(54, 162, 235, 0.9)',
-                'rgba(255, 206, 86, 0.9)',
-                'rgba(75, 192, 192, 0.9)',
-                'rgba(153, 102, 255, 0.9)',
+                strong_color,
+                med_color,
+                neu_color,
+                med_opp_color,
+                strong_opp_color,
             ],
             color: "#ffffff",
             borderWidth: 1
