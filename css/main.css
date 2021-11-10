@@ -15,6 +15,14 @@ body {
     height: 100vh;
 }
 
+.h-80vh {
+    height: 80vh;
+}
+
+.h-90vh {
+    height: 90vh;
+}
+
 .h-30vh {
     height: 30vh;
 }

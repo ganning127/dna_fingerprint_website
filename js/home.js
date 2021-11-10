@@ -11,6 +11,8 @@ function init() {
             // NOTE: If "loop" is enabled, this will never fire.
             console.log('show navbar');
             document.getElementById("navbar").style.top = "0";
+
+            document.getElementById("bottom").classList.add("visible");
         },
 
     }).go();

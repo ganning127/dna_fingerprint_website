@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/texts.css">
     <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>DNA Fingerprinting</title>
 </head>
 
@@ -43,22 +46,102 @@
         </div>
     </nav>
 
-    <section class="container justify-content-center align-items-center d-flex h-100vh">
+    <section class="container justify-content-center align-items-center d-flex h-80vh">
         <div>
             <h1 id="ending-text" class="display-4">
 
             </h1>
-
             <a href="./about.html">
                 <div class="arrow mx-auto mt-5">
                     <div class="arrow-top"></div>
                     <div class="arrow-bottom"></div>
                 </div>
             </a>
+        </div>
+    </section>
+
+    <section id="bottom">
+        <div class="container">
+            <h1 class="text-light-green bold text-center">Source Code</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="https://github.com/ganning127/dna_fingerprint_website" target="_blank">
+                        <h3 class="no-color"><i class="fas fa-code"></i> Website</h3>
+                    </a>
+                    <p class="">This is the website that you are currently viewing!
+                    </p>
+                    <p>This website was built with:
+                    </p>
+                    <ul>
+                        <li><code>HTML</code>: The skeleton. Used to create the website's content</li>
+                        <li><code>CSS</code>: To make everything look nice</li>
+                        <li><code>Bootstrap</code>: Pre-made CSS classes!</li>
+                        <li><code>JavaScript</code>: The muscle behind the website</li>
+                        <li><code>chart.js</code>: Used to create the charts on the data page.</li>
+                        <li><code>typeit.js</code>: Used to create the typewriter effect.</li>
+                        <li><code>Hasura</code>: Database used to store survey responses.</li>
+                        <li><code>graphql</code>: Langauge used to query the database.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <img src="./img/website_homepage.png" alt="website homepage" class="img-fluid">
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-5 d-flex align-items-center">
+                    <img src="./img/r_code.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-md-7">
+                    <a href="https://github.com/ganning127/dna-fingerprinting-sentiment-analysis" target="_blank">
+                        <h3 class="no-color mt-4"><i class="fas fa-code"></i> Sentiment Analysis Code</h3>
+                    </a>
+                    <p>Sentiment analysis was used to collect data on the research page in order to figure out the
+                        general
+                        public's opinnion on DNA fingerprinting.</p>
+
+                    <p>Languages used:</p>
+                    <ul>
+                        <li><code>Python3</code>: The best programming language (objectively).</li>
+                        <li><code>Jupyter Notebook</code>: Aka. Google Colab. Environment in which the Python code was
+                            run.</li>
+                        <li><code>Tweepy</code>: Python library used to query the Twitter API.</li>
+                        <li><code>gspread</code>: Python library used to interact with Google Spreadsheets.</li>
+                        <li><code>colab-env</code>: Python library used to set environment variables in Google Colab.
+                        </li>
+                        <li><code>demoji</code>: Python library used to decode emojis into words (🙂 → Slightly Smiling
+                            Face).
+                        </li>
+                        <li><code>textblob</code>Python library used to conduct sentiment, subjectivity, and phrase
+                            analysis.
+                        </li>
+                        <li><code>nltk</code>: Python library used for preprocessing of tweets.</li>
+                        <li><code>pandas</code>: Python library used to temporarily hold tweets before pushing to the
+                            Google
+                            Spreadsheet.</li>
+                        <li><code>re</code>: Aka. Regex. Python library used to make string matche to figure out how to
+                            clean
+                            tweets.</li>
+                        <li><code>os</code>Python library used to get environment variables.</li>
+                    </ul>
+
+                </div>
+            </div>
 
 
 
         </div>
+
+        <hr>
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <p class="text-muted">&copy; 2021 <a href="https://ganning127.github.io/" target="_blank"
+                        class="no-color">Ganning Xu</a>
+                </p>
+            </div>
+        </div>
+
     </section>
 
 
