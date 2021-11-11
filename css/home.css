@@ -35,17 +35,7 @@ nav p {
     color: lightgreen;
 }
 
-.no-color {
-    color: inherit;
-}
-.no-color:hover {
-    color: inherit;
-    /* no underline */
-    text-decoration: none;
-}
-hr {
-    border-color: white;
-}
+
 
 img {
     z-index: -1;

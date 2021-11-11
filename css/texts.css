@@ -6,6 +6,9 @@
     color: lightgreen;
 }
 
+.text-light-red {
+    color: lightcoral;
+}
 .text-wheat {
     color: wheat;
 }
@@ -41,4 +44,25 @@ code {
   padding: 3px;
   border-radius: 5px;
   color: lightgreen;
+}
+
+.no-color {
+  color: inherit;
+}
+.no-color:hover {
+  color: inherit;
+  /* no underline */
+  text-decoration: none;
+}
+hr {
+  border-color: white;
+}
+
+.big-text {
+  font-size: 10rem;
+}
+
+.italic {
+  /* italic text */
+  font-style: italic;
 }
