@@ -1,11 +1,17 @@
 const HASURA_ADMIN_SECRET = "le0JJkEQTajIKHYcLGjnSNfiSzBMhLaaImogHM0sjH520PG1N4K0hyXfMDsvANMq";
 const HASURA_ENDPOINT = "https://winning-scorpion-44.hasura.app/v1/graphql";
 
-const strong_color = "rgba(2, 186, 63, 1.0)";
-const med_color = "rgba(178, 255, 145, 1.0)";
-const neu_color = "rgba(255, 239, 0, 1.0)";
-const med_opp_color = "rgba(255, 174, 132, 1.0)";
-const strong_opp_color = "rgba(186, 5, 5, 1.0)";
+const strong_color = "rgba(4, 219, 197, 0.4)";
+const med_color = "rgba(187, 134, 251, 0.4)";
+const neu_color = "rgba(55, 0, 178, 0.4)";
+const med_opp_color = "rgba(18, 18, 18, 0.4)";
+const strong_opp_color = "rgba(207, 102, 122, 0.4)";
+
+const strong_color_border = "rgba(4, 219, 197, 1.0)";
+const med_color_border = "rgba(187, 134, 251, 1.0)";
+const neu_color_border = "rgba(55, 0, 178, 1.0)";
+const med_opp_color_border = "rgba(18, 18, 18, 1.0)";
+const strong_opp_color_border = "rgba(207, 102, 122, 1.0)";
 
 async function createGraphs() {
 
@@ -41,9 +47,14 @@ function create_biggest_benefit_chart(responseData) {
             label: 'How much do you agree with racial discrimination?',
             data: [biggest_benefit_data.solv_crime, biggest_benefit_data.track_rela, biggest_benefit_data.id_remains],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.9)',
-                'rgba(54, 162, 235, 0.9)',
-                'rgba(255, 206, 86, 0.9)',
+                strong_color,
+                med_color,
+                neu_color,
+            ],
+            borderColor: [
+                strong_color_border,
+                med_color_border,
+                neu_color_border,
             ],
             color: "#ffffff",
             borderWidth: 1
@@ -109,9 +120,14 @@ function create_biggest_issue_chart(responseData) {
             label: 'How much do you agree with racial discrimination?',
             data: [biggest_issue_data.hum_bias, biggest_issue_data.racial_discrim, biggest_issue_data.priv_con],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.9)',
-                'rgba(54, 162, 235, 0.9)',
-                'rgba(255, 206, 86, 0.9)',
+                strong_color,
+                med_color,
+                neu_color,
+            ],
+            borderColor: [
+                strong_color_border,
+                med_color_border,
+                neu_color_border,
             ],
             color: "#ffffff",
             borderWidth: 1
@@ -182,6 +198,13 @@ function create_racial_discrim_chart(responseData) {
                 med_opp_color,
                 strong_opp_color,
             ],
+            borderColor: [
+                strong_color_border,
+                med_color_border,
+                neu_color_border,
+                med_opp_color_border,
+                strong_opp_color_border,
+            ],
             color: "#ffffff",
             borderWidth: 1
         }]
@@ -217,6 +240,13 @@ function create_national_db_chart(responseData) {
                 med_opp_color,
                 strong_opp_color,
             ],
+            borderColor: [
+                strong_color_border,
+                med_color_border,
+                neu_color_border,
+                med_opp_color_border,
+                strong_opp_color_border,
+            ],
             color: "#ffffff",
             borderWidth: 1
         }]
@@ -250,6 +280,13 @@ function create_infringe_rights_chart(responseData) {
                 neu_color,
                 med_opp_color,
                 strong_opp_color,
+            ],
+            borderColor: [
+                strong_color_border,
+                med_color_border,
+                neu_color_border,
+                med_opp_color_border,
+                strong_opp_color_border,
             ],
 
             borderWidth: 1
@@ -321,6 +358,13 @@ function create_bias_chart(responseData) {
                 neu_color,
                 med_opp_color,
                 strong_opp_color,],
+            borderColor: [
+                strong_color_border,
+                med_color_border,
+                neu_color_border,
+                med_opp_color_border,
+                strong_opp_color_border,
+            ],
             borderWidth: 1
         }]
     };
@@ -424,6 +468,13 @@ function create_support_solve_crime_chart(responseData) {
                 neu_color,
                 med_opp_color,
                 strong_opp_color,
+            ],
+            borderColor: [
+                strong_color_border,
+                med_color_border,
+                neu_color_border,
+                med_opp_color_border,
+                strong_opp_color_border,
             ],
             color: "#ffffff",
             borderWidth: 1
@@ -541,6 +592,13 @@ function create_support_general_chart(responseData) {
                 neu_color,
                 med_opp_color,
                 strong_opp_color,
+            ],
+            borderColor: [
+                strong_color_border,
+                med_color_border,
+                neu_color_border,
+                med_opp_color_border,
+                strong_opp_color_border,
             ],
             color: "#ffffff",
             borderWidth: 1

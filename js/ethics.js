@@ -92,7 +92,6 @@ function createWillingChart() {
                 }
             },
         }
-        // color: "#ffffff"
     };
 
     const myChart = new Chart(privacy_chart, privacy_chart_config);
