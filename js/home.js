@@ -4,7 +4,7 @@ function init() {
         speed: 50,
         // lifeLike: true,
         waitUntilVisible: true,
-        strings: 'Good job, you have reached the end. We hope you have enjoyed the experience learning more about <span class="bold text-light-green">DNA fingerprinting</span>.',
+        strings: 'Good job, you have reached the end. We hope you have enjoyed the learning more about <span class="bold text-light-green">DNA fingerprinting</span>.',
 
         afterComplete: async () => {
             // Will fire after the entire instance has completed typing.
