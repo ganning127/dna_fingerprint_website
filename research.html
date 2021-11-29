@@ -20,7 +20,7 @@
 
     <section class="cover">
         <div class="container h-30vh d-flex align-items-center">
-            <h1><span class="text-light-green bold">Research</span>: Public's Opinnion on DNA
+            <h1><span class="text-light-green bold">Research</span>: Public's Opinion on DNA
                 Fingerprinting using the Twitter API</h1>
         </div>
     </section>
@@ -29,7 +29,7 @@
         <div class="container">
 
             <h3 class="text-light-green bold">tl;dr</h3>
-            <p class="lead">Goals: To analyze the public's opinnion on DNA fingerprinting using publically avaliable
+            <p class="lead">Goals: To analyze the public's Opinion on DNA fingerprinting using publicly available
                 tweets.</p>
 
             <h3 class="text-light-green">Overview</h3>
@@ -47,10 +47,10 @@
                 <li><code>tweepy</code> (to search for tweets)</li>
                 <li><code>gspread</code> (to create database)</li>
                 <li><code>colab-env</code> (to set environment variables)</li>
-                <li><code>demoji (to process and clean emojis)</code></li>
+                <li><code>demoji</code> (to process and clean emojis)</li>
                 <li><code>textblob</code> (sentiment and subjectivity analysis)</li>
                 <li><code>nltk</code> (text preprocessing)</li>
-                <li><code>pandas</code></li>
+                <li><code>pandas</code>(to store data before adding to database)</li>
                 <li><code>re</code> (text and data cleaning)</li>
                 <li><code>os</code> (to get environment variables)</li>
             </ul>
@@ -61,13 +61,13 @@
                 <li>Query the Twitter API for 100 English tweets for each keyword in the keyword list before a
                     certain
                     date. The date is changed everyday to query for different results.</li>
-                <li>Populate each raw tweet into their corrosponding date sheet</li>
+                <li>Populate each raw tweet into their corresponding date sheet</li>
             </ol>
             <p class="text-muted text-center"><em>*Tweets were queried for each day between 10-09-2021 to
                     11-03-2021</em></p>
             <div class="text-center mb-5">
                 <img src="./img/query_twitter_api.png" alt="" class="img-fluid mx-auto mh-700px">
-                <p class="text-muted">Figure 1: Diagram of steps taken in collecting publically avaliable tweets.
+                <p class="text-muted">Figure 1: Diagram of steps taken in collecting publicly available tweets.
                 </p>
             </div>
 
@@ -170,7 +170,7 @@
                 and 1 being the most positive</p>
             <canvas id="sentiment_chart" class="mt-5"></canvas>
 
-            <p>Through sentiment analysis, it is possible to determine the public's opinnion on DNA fingerprinting.
+            <p>Through sentiment analysis, it is possible to determine the public's opinion on DNA fingerprinting.
                 <code>Genetic profiling</code> contained tweets with the most positive sentiment (0.13), while
                 <code>genetic fingerprinting</code> contained tweets with the most negative sentiment. Taking the
                 average sentiment across all keywords reveals that the average sentiment is <code>0.06</code> This
@@ -180,7 +180,7 @@
             </p>
 
             <h3 class="text-light-green">Subjectivity Analysis</h3>
-            <p>Subjectivity analysis (how objective or opinnionated) was performed on each tweet.</p>
+            <p>Subjectivity analysis (how objective or opinionated) was performed on each tweet.</p>
 
             <table class="table table-hover table-dark table-sm text-center" id="data-table">
                 <thead>
@@ -241,7 +241,7 @@
                 keyword were. For example, <code>dna fingerprinting</code> contained tweets that were the most
                 objective (0.35), while <code>genetic profiling</code> contained tweets that were the most subjective
                 (0.45). Taking the average of all keywords in subjectivity analysis reveals that the average
-                subjectivity was <code>0.398</code>. This means that on averge, the public typically is more objective
+                subjectivity was <code>0.398</code>. This means that on average, the public typically is more objective
                 than subjective when it comes to talking about DNA fingerprinting</p>
 
             <h3 class="text-light-green">Results</h3>
@@ -272,20 +272,20 @@
             <ul>
                 <li>
                     The range in sentiment scores was only <code>0.2</code>, which may be explained
-                    by just the timespan in which tweets were collected, rather than the overall sentiment over time.
+                    by just the time span in which tweets were collected, rather than the overall sentiment over time.
                 </li>
                 <li>The range in subjectivity scores was only <code>0.10</code>, which may be small enough to be
                     accounted for in confidence errors by the subjectivity analysis model.</li>
                 <li>Since we did not have access to the Twitter's research API we were not able to search for tweets in
                     all of Twitter's history, only within a set month. These results may be different than the results
-                    resulting from querying for tweets from all of Twitter's datbases.</li>
+                    resulting from querying for tweets from all of Twitter's databases.</li>
             </ul>
 
             <h3 class="text-light-green">Further Research</h3>
             <p>Further research could be done in the following aspects:</p>
             <ul>
                 <li>Instead of querying Twitter's API for tweets over the span of a month, query their overall database
-                    for tweetes in all of time.</li>
+                    for tweets in all of time.</li>
                 <li>The source code linked above could be adjusted to perform sentiment analysis on ANY project. All you
                     would need to do is add your API developer keys and change keywords to search for!</li>
             </ul>

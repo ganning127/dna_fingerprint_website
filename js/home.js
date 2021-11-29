@@ -13,6 +13,7 @@ function init() {
             document.getElementById("navbar").style.top = "0";
 
             document.getElementById("bottom").classList.add("visible");
+
         },
 
     }).go();
